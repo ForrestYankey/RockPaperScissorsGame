@@ -1,3 +1,4 @@
+// ask computer for choice
 // computer picks a number between 1-3
 function getComputerSelection() {
     num = Math.floor(Math.random() * 3) + 1;
@@ -14,47 +15,48 @@ function getComputerSelection() {
 }
 
 // ask player for choice
-let getPlayerChoice = prompt("Rock, Paper, or Scissors?");
-// compare getgetPlayerChoice to getgetComputerSelection
-function playRound() {
+function getPlayerSelection() {
+     return getPlayerSelection = prompt("Rock, Paper, or Scissors?");
+     
+}
+
+//variables
+const playerSelection = getPlayerSelection();
+const computerSelection = getComputerSelection();
+
+// compare playerSelection to getComputerSelection
+function playRound(playerSelection, computerSelection) {
 // if getgetPlayerChoice == getgetComputerSelection return "Tie!"
-    if (getPlayerChoice === getComputerSelection) {
+    if (playerSelection === computerSelection) {
         return playRound = "It's a tie!";
 // if getgetPlayerChoice == Rock and getgetComputerSelection == Paper return "Computer wins!"
-}   else if ((getPlayerChoice = "Rock") && (getComputerSelection = "Paper")) {
+}   else if ((playerSelection = "Rock") && (computerSelection = "Paper")) {
         return playRound = "Computer wins!";
 // if getgetPlayerChoice == Paper and getgetComputerSelection == Rock return "You win!"
-}   else if ((getPlayerChoice = "Paper") && (getComputerSelection = "Rock")) {
-return playRound = "You win!";
+}   else if ((playerSelection = "Paper") && (computerSelection = "Rock")) {
+        return playRound = "You win!";
 // if getgetPlayerChoice == Paper and getgetComputerSelection == Scissors return "Computer wins!"
-}   else if ((getPlayerChoice = "Paper") && (getComputerSelection = "Scissors")) {
-    return playRound = "Computer wins!";
+}   else if ((playerSelection = "Paper") && (computerSelection = "Scissors")) {
+        return playRound = "Computer wins!";
 // if getgetPlayerChoice == Scissors and getgetComputerSelection == Paper return "You win!"
-}   else if ((getPlayerChoice = "Scissors") && (getComputerSelection = "Paper")) {
-    return playRound = "You win!";
+}   else if ((playerSelection = "Scissors") && (computerSelection = "Paper")) {
+        return playRound = "You win!";
 // if getgetPlayerChoice == Rock and getgetComputerSelection == Scissors return "You win!"
-}   else if ((getPlayerChoice = "Rock") && (getComputerSelection = "Scissors")) {
-    return playRound = "You win!";
+}   else if ((playerSelection = "Rock") && (computerSelection = "Scissors")) {
+        return playRound = "You win!";
 // if getgetPlayerChoice == Scissors and getgetComputerSelection == Rock return "Computer wins!"
-}   else if ((getPlayerChoice = "Scissors") && (getComputerSelection = "Rock")) {
-    return playRound = "Computer wins!";
+}   else if ((playerSelection = "Scissors") && (computerSelection = "Rock")) {
+        return playRound = "Computer wins!";
+}   
 }
+
+//console.log(computerSelection);
+//console.log(playerSelection);
+//console.log(playRound());
+
+function game () {
+    playRound(playerSelection, computerSelection);
+    console.log("You played " + playerSelection + ". " + "Computer played " + computerSelection + ". " + playRound);
 }
-// Display outcome
 
-//console.log("computer: " + getComputerSelection())
-//console.log("player: " + getPlayerChoice)
-//console.log(playRound())
-
-const playerSelection = getPlayerChoice;
-const computerSelection = getComputerSelection();
-//run the getComputerSelection vs getPlayerChoice five time in a row and show the results each time
-function game() {
-    return game = playRound(playerSelection, computerSelection)
-}
-console.log("computer: " + computerSelection)
-console.log("player: " + playerSelection)
-console.log(game())
-
-
-
+game();
